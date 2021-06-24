@@ -19,7 +19,7 @@ public:
 	{
 		return (AmountOfMatter() * 8.314 * T) / volume_;
 	}
-	void getParams(double& vol, double& mol, double& mas) // добавил свой метод, так как для операции изменения массы каким-то образом надо обратиться к privat mass_
+	void getParams(double& vol, double& mol, double& mas) // Г¤Г®ГЎГ ГўГЁГ« Г±ГўГ®Г© Г¬ГҐГІГ®Г¤, ГІГ ГЄ ГЄГ ГЄ Г¤Г«Гї Г®ГЇГҐГ°Г Г¶ГЁГЁ ГЁГ§Г¬ГҐГ­ГҐГ­ГЁГї Г¬Г Г±Г±Г» ГЄГ ГЄГЁГ¬-ГІГ® Г®ГЎГ°Г Г§Г®Г¬ Г­Г Г¤Г® Г®ГЎГ°Г ГІГЁГІГјГ±Гї ГЄ privat mass_
 	{
 		vol = volume_;
 		mol = molar_;
