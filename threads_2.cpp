@@ -7,7 +7,7 @@ using namespace std;
 bool flag_read = true;
 
 
-vector <int> read_file(string title) // функция для считывания файла
+vector <int> read_file(string title) // ГґГіГ­ГЄГ¶ГЁГї Г¤Г«Гї Г±Г·ГЁГІГ»ГўГ Г­ГЁГї ГґГ Г©Г«Г 
 {
 	int tmp;
 	vector <int> arr;
@@ -18,16 +18,16 @@ vector <int> read_file(string title) // функция для считывания файла
 		arr.push_back(tmp);
 	}
 	fin.close();
-	return arr; // возвращаем вектор чисел из файла
+	return arr; // ГўГ®Г§ГўГ°Г Г№Г ГҐГ¬ ГўГҐГЄГІГ®Г° Г·ГЁГ±ГҐГ« ГЁГ§ ГґГ Г©Г«Г 
 }
 
 
-void thr_func(string name, vector <int>& final_array, const int i, vector <int>& my_arr) // функция для потоков, чтобы они парарелльно считывали каждый свой файл
+void thr_func(string name, vector <int>& final_array, const int i, vector <int>& my_arr) // ГґГіГ­ГЄГ¶ГЁГї Г¤Г«Гї ГЇГ®ГІГ®ГЄГ®Гў, Г·ГІГ®ГЎГ» Г®Г­ГЁ ГЇГ Г°Г Г°ГҐГ«Г«ГјГ­Г® Г±Г·ГЁГІГ»ГўГ Г«ГЁ ГЄГ Г¦Г¤Г»Г© Г±ГўГ®Г© ГґГ Г©Г«
 {
 	my_arr = read_file(name);
 	if (my_arr.empty())
 	{
-		flag_read = false; // флаг на проверку считался ли файл
+		flag_read = false; // ГґГ«Г ГЈ Г­Г  ГЇГ°Г®ГўГҐГ°ГЄГі Г±Г·ГЁГІГ Г«Г±Гї Г«ГЁ ГґГ Г©Г«
 	}
 }
 
@@ -35,7 +35,7 @@ int my_function(int n, string* filenames)
 {
 	vector <int> final_array;
 	thread* thread_array = new thread[n];
-	bool flag = false; // флаг для подсчета последовательностей чисел
+	bool flag = false; // ГґГ«Г ГЈ Г¤Г«Гї ГЇГ®Г¤Г±Г·ГҐГІГ  ГЇГ®Г±Г«ГҐГ¤Г®ГўГ ГІГҐГ«ГјГ­Г®Г±ГІГҐГ© Г·ГЁГ±ГҐГ«
 	int result = 0;
 	vector <int>* tmp = new vector <int>[n];
 	for (int i = 0; i < n; i++)
